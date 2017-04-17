@@ -1,0 +1,2244 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/mzgoddard/hard-source-webpack-plugin#readme"
+
+    >hard-source-webpack-plugin (v0.3.11)</a>
+</h1>
+<h4>Hard cache the source of modules in webpack.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin">module hard-source-webpack-plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard-source-webpack-plugin">
+            function <span class="apidocSignatureSpan"></span>hard-source-webpack-plugin
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.devtool_options">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>devtool_options
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.env_hash">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>env_hash
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module_factory">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module_factory
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_module
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_source">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_source
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.toString">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>cache_serializers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>dependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>deserialize_dependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module_factory.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_module.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_source.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.cache_serializers">module hard-source-webpack-plugin.cache_serializers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.cache_serializers.FileSerializer">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.cache_serializers.</span>FileSerializer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.cache_serializers.LevelDbSerializer">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.cache_serializers.</span>LevelDbSerializer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.dependencies">module hard-source-webpack-plugin.dependencies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardContextDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardContextDependency
+            <span class="apidocSignatureSpan">(request, recursive, regExp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyCompatibilityDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyCompatibilityDependency
+            <span class="apidocSignatureSpan">(originModule)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyExportDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyExportDependency
+            <span class="apidocSignatureSpan">(originModule, id, name, precedence)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyExportImportedSpecifierDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyExportImportedSpecifierDependency
+            <span class="apidocSignatureSpan">(originModule, importDependency, id, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyImportDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyImportDependency
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyImportSpecifierDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyImportSpecifierDependency
+            <span class="apidocSignatureSpan">(importDependency, id, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardModuleDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardModuleDependency
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardNullDependency">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardNullDependency
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.deserialize_dependencies">module hard-source-webpack-plugin.deserialize_dependencies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.blocks">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.deserialize_dependencies.</span>blocks
+            <span class="apidocSignatureSpan">(blocks, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.dependencies">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.deserialize_dependencies.</span>dependencies
+            <span class="apidocSignatureSpan">(deps, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.variables">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.deserialize_dependencies.</span>variables
+            <span class="apidocSignatureSpan">(vars, parent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.devtool_options">module hard-source-webpack-plugin.devtool_options</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.devtool_options.devtool_options">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>devtool_options
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.env_hash">module hard-source-webpack-plugin.env_hash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.env_hash.env_hash">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>env_hash
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module">module hard-source-webpack-plugin.hard_context_module</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.hard_context_module">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.needRebuild">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.</span>needRebuild
+            <span class="apidocSignatureSpan">(cacheItem, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module.prototype">module hard-source-webpack-plugin.hard_context_module.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.build">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>build
+            <span class="apidocSignatureSpan">(options, compilation, resolver, fs, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.isHard">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>isHard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.needRebuild">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>needRebuild
+            <span class="apidocSignatureSpan">(fileTimestamps, contextTimestamps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.readableIdentifier">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>readableIdentifier
+            <span class="apidocSignatureSpan">(requestShortener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.source">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>source
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.updateHash">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>updateHash
+            <span class="apidocSignatureSpan">(hash)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module_factory">module hard-source-webpack-plugin.hard_context_module_factory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module_factory.hard_context_module_factory">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module_factory
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module_factory.prototype">module hard-source-webpack-plugin.hard_context_module_factory.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_context_module_factory.prototype.create">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module_factory.prototype.</span>create
+            <span class="apidocSignatureSpan">(context, dependency, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_module">module hard-source-webpack-plugin.hard_module</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.hard_module">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_module
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.needRebuild">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.</span>needRebuild
+            <span class="apidocSignatureSpan">(cacheItem, fileDependencies, contextDependencies, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_module.prototype">module hard-source-webpack-plugin.hard_module.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.build">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>build
+            <span class="apidocSignatureSpan">(options, compilation, resolver, fs, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.isHard">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>isHard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.libIdent">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>libIdent
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.needRebuild">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>needRebuild
+            <span class="apidocSignatureSpan">(fileTimestamps, contextTimestamps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.source">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>source
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.updateHash">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>updateHash
+            <span class="apidocSignatureSpan">(hash)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_source">module hard-source-webpack-plugin.hard_source</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_source.hard_source">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_source
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.hard_source.prototype">module hard-source-webpack-plugin.hard_source.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.constructor">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(cacheItem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.listMap">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>listMap
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.map">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>map
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.node">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>node
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.toString">module hard-source-webpack-plugin.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.toString.toString">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.hard-source-webpack-plugin.util">module hard-source-webpack-plugin.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hard-source-webpack-plugin.util.cachePrefix">
+            function <span class="apidocSignatureSpan">hard-source-webpack-plugin.util.</span>cachePrefix
+            <span class="apidocSignatureSpan">(compilation)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin" id="apidoc.module.hard-source-webpack-plugin">module hard-source-webpack-plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard-source-webpack-plugin" id="apidoc.element.hard-source-webpack-plugin.hard-source-webpack-plugin">
+        function <span class="apidocSignatureSpan"></span>hard-source-webpack-plugin
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardSourceWebpackPlugin(options) {
+  this.options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.devtool_options" id="apidoc.element.hard-source-webpack-plugin.devtool_options">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>devtool_options
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">devtool_options = function (options) {
+  var devtool = options.devtool;
+  if(devtool &#x26;&#x26; (devtool.indexOf(&#x22;sourcemap&#x22;) &#x3e;= 0 || devtool.indexOf(&#x22;source-map&#x22;) &#x3e;= 0)) {
+    var hidden = devtool.indexOf(&#x22;hidden&#x22;) &#x3e;= 0;
+    var inline = devtool.indexOf(&#x22;inline&#x22;) &#x3e;= 0;
+    var evalWrapped = devtool.indexOf(&#x22;eval&#x22;) &#x3e;= 0;
+    var cheap = devtool.indexOf(&#x22;cheap&#x22;) &#x3e;= 0;
+    var moduleMaps = devtool.indexOf(&#x22;module&#x22;) &#x3e;= 0;
+    var noSources = devtool.indexOf(&#x22;nosources&#x22;) &#x3e;= 0;
+    var legacy = devtool.indexOf(&#x22;@&#x22;) &#x3e;= 0;
+    var modern = devtool.indexOf(&#x22;#&#x22;) &#x3e;= 0;
+    var comment = legacy &#x26;&#x26; modern ? &#x22;\n/*\n//@ sourceMappingURL=[url]\n//# sourceMappingURL=[url]\n*/&#x22; :
+      legacy ? &#x22;\n/*\n//@ sourceMappingURL=[url]\n*/&#x22; :
+      modern ? &#x22;\n//# sourceMappingURL=[url]&#x22; :
+      null;
+    return {
+      filename: inline ? null : options.output.sourceMapFilename,
+      moduleFilenameTemplate: options.output.devtoolModuleFilenameTemplate,
+      fallbackModuleFilenameTemplate: options.output.devtoolFallbackModuleFilenameTemplate,
+      append: hidden ? false : comment,
+      module: moduleMaps ? true : cheap ? false : true,
+      columns: cheap ? false : true,
+      lineToLine: options.output.devtoolLineToLine,
+      noSources: noSources,
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.env_hash" id="apidoc.element.hard-source-webpack-plugin.env_hash">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>env_hash
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">env_hash = function (options) {
+  options = options || {};
+  var root = options.root || process.cwd();
+  var files = options.files || [&#x27;package.json&#x27;];
+  var directories = options.directories || [&#x27;node_modules&#x27;];
+
+  return Promise.all([
+    hashFiles(root, files),
+    Promise.all(directories.map(function(dir) {
+      return readdir(path.join(root, dir))
+      .then(function(items) {
+        return Promise.all(items.map(function(item) {
+          return stat(path.join(root, dir, item))
+          .then(function(stat) {
+            if (stat.isDirectory()) {
+              return hashFiles(path.join(root, dir, item), files);
+            }
+            if (stat.isFile()) {
+              return hashFile(path.join(root, dir, item))
+              .then(function(hash) {return hash ? [hash] : hash;});
+            }
+          })
+          .catch(function() {console.error(arguments)});
+        }))
+        .then(function(hashes) {return hashes.filter(Boolean);});
+      })
+      .catch(function() {})
+      .then(flatten);
+    }))
+    .then(flatten),
+  ])
+  .then(flatten)
+  .then(function(items) {
+    items.forEach(function(item) {
+      item[0] = path.relative(root, item[0]);
+    });
+    // console.log(items);
+    items.sort(function(a, b) {
+      if (a[0] &#x3c; b[0]) {
+        return -1;
+      }
+      else if (a[0] &#x3e; b[0]) {
+        return 1;
+      }
+      return 0;
+    });
+    return hashObject(items);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module" id="apidoc.element.hard-source-webpack-plugin.hard_context_module">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardContextModule(cacheItem) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new ContextModule(cacheItem.source, cacheItem.identifier, cacheItem.context),
+      HardContextModule.prototype
+    )
+  );
+  this.cacheItem = cacheItem;
+  this.context = cacheItem.context;
+  this.recursive = cacheItem.recursive;
+  this.regExp = cacheItem.regExp ? new RegExp(cacheItem.regExp) : cacheItem.regExp;
+  this.addon = cacheItem.addon;
+  this.async = cacheItem.async;
+  this.cacheable = true;
+  this.contextDependencies = [cacheItem.context];
+  this.built = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module_factory" id="apidoc.element.hard-source-webpack-plugin.hard_context_module_factory">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module_factory
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardContextModuleFactory(options) {
+  this.compilation = options.compilation;
+  this.factory = options.factory;
+  this.resolveCache = options.resolveCache;
+  this.moduleCache = options.moduleCache;
+  this.fileTimestamps = options.fileTimestamps;
+  this.fileMd5s = options.fileMd5s;
+  this.cachedMd5s = options.cachedMd5s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module" id="apidoc.element.hard-source-webpack-plugin.hard_module">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_module
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardModule(cacheItem) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new RawModule(cacheItem.source, cacheItem.identifier, cacheItem.userRequest),
+      HardModule.prototype
+    )
+  );
+
+  this.cacheItem = cacheItem;
+
+  this.request = cacheItem.request;
+  this.userRequest = cacheItem.userRequest;
+  this.rawRequest = cacheItem.rawRequest;
+  this.resource = cacheItem.resource;
+  this.context = cacheItem.context;
+  this.loaders = cacheItem.loaders;
+
+  this.strict = cacheItem.strict;
+  this.exportsArgument = cacheItem.exportsArgument;
+  this.meta = cacheItem.meta;
+  this.buildTimestamp = cacheItem.buildTimestamp;
+  this.fileDependencies = cacheItem.fileDependencies;
+  this.contextDependencies = cacheItem.contextDependencies;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_source" id="apidoc.element.hard-source-webpack-plugin.hard_source">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_source
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardSource(cacheItem) {
+  RawSource.call(this, cacheItem.source);
+  this.cacheItem = cacheItem;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.toString" id="apidoc.element.hard-source-webpack-plugin.toString">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.cache_serializers" id="apidoc.module.hard-source-webpack-plugin.cache_serializers">module hard-source-webpack-plugin.cache_serializers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.cache_serializers.FileSerializer" id="apidoc.element.hard-source-webpack-plugin.cache_serializers.FileSerializer">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.cache_serializers.</span>FileSerializer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileSerializer(options) {
+  this.path = options.cacheDirPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.cache_serializers.LevelDbSerializer" id="apidoc.element.hard-source-webpack-plugin.cache_serializers.LevelDbSerializer">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.cache_serializers.</span>LevelDbSerializer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LevelDbSerializer(options) {
+  this.path = options.cacheDirPath;
+  this.leveldbLock = Promise.resolve();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.dependencies" id="apidoc.module.hard-source-webpack-plugin.dependencies">module hard-source-webpack-plugin.dependencies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardContextDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardContextDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardContextDependency
+        <span class="apidocSignatureSpan">(request, recursive, regExp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardContextDependency(request, recursive, regExp) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new ContextDependency(request, recursive, regExp),
+      HardContextDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyCompatibilityDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyCompatibilityDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyCompatibilityDependency
+        <span class="apidocSignatureSpan">(originModule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardHarmonyCompatibilityDependency(originModule) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new HarmonyCompatibilityDependency(originModule),
+      HardHarmonyCompatibilityDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyExportDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyExportDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyExportDependency
+        <span class="apidocSignatureSpan">(originModule, id, name, precedence)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardHarmonyExportDependency(originModule, id, name, precedence) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new NullDependency(),
+      HardHarmonyExportDependency.prototype
+    )
+  );
+  this.originModule = originModule;
+  this.id = id;
+  this.name = name;
+  this.precedence = precedence;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyExportImportedSpecifierDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyExportImportedSpecifierDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyExportImportedSpecifierDependency
+        <span class="apidocSignatureSpan">(originModule, importDependency, id, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardHarmonyExportImportedSpecifierDependency(originModule, importDependency, id, name) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new HarmonyExportImportedSpecifierDependency(originModule, importDependency, null, id, name, null),
+      HardHarmonyExportImportedSpecifierDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyImportDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyImportDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyImportDependency
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardHarmonyImportDependency(request) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new ModuleDependency(request),
+      HardHarmonyImportDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyImportSpecifierDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardHarmonyImportSpecifierDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardHarmonyImportSpecifierDependency
+        <span class="apidocSignatureSpan">(importDependency, id, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardHarmonyImportSpecifierDependency(importDependency, id, name) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new HarmonyImportSpecifierDependency(importDependency, null, id, name, null),
+      HardHarmonyImportSpecifierDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardModuleDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardModuleDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardModuleDependency
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardModuleDependency(request) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new ModuleDependency(request),
+      HardModuleDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.dependencies.HardNullDependency" id="apidoc.element.hard-source-webpack-plugin.dependencies.HardNullDependency">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.dependencies.</span>HardNullDependency
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardNullDependency() {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new NullDependency(),
+      HardNullDependency.prototype
+    )
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.deserialize_dependencies" id="apidoc.module.hard-source-webpack-plugin.deserialize_dependencies">module hard-source-webpack-plugin.deserialize_dependencies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.blocks" id="apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.blocks">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.deserialize_dependencies.</span>blocks
+        <span class="apidocSignatureSpan">(blocks, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deserializeBlocks(blocks, parent) {
+  blocks.map(function(req) {
+    if (req.async) {
+      var block = new AsyncDependenciesBlock(req.name, parent);
+      block.dependencies = deserializeDependencies.call(this, req.dependencies, parent);
+      block.variables = deserializeVariables.call(this, req.variables, parent);
+      deserializeBlocks(req.blocks, block);
+      return block;
+    }
+  }, this)
+  .filter(Boolean)
+  .forEach(function(block) {
+    parent.addBlock(block);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.dependencies" id="apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.dependencies">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.deserialize_dependencies.</span>dependencies
+        <span class="apidocSignatureSpan">(deps, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deserializeDependencies(deps, parent) {
+  return deps.map(function(req) {
+    if (req.contextDependency) {
+      var dep = new HardContextDependency(req.request, req.recursive, req.regExp ? new RegExp(req.regExp) : null);
+      dep.critical = req.contextCritical;
+      dep.async = req.async;
+      dep.loc = req.loc;
+      if (req.optional) {
+        dep.optional = true;
+      }
+      return dep;
+    }
+    if (req.constDependency) {
+      return new HardNullDependency();
+    }
+    if (req.harmonyExport) {
+      return new HardHarmonyExportDependency(parent, req.harmonyId, req.harmonyName, req.harmonyPrecedence);
+    }
+    if (req.harmonyImport) {
+      if (this.state.imports[req.request]) {
+        return this.state.imports[req.request];
+      }
+      return this.state.imports[req.request] = new HardHarmonyImportDependency(req.request);
+    }
+    if (req.harmonyImportSpecifier) {
+      if (!this.state.imports[req.harmonyRequest]) {
+        this.state.imports[req.harmonyRequest] = new HardHarmonyImportDependency(req.harmonyRequest);
+      }
+      var dep = new HardHarmonyImportSpecifierDependency(this.state.imports[req.harmonyRequest], req.harmonyId, req.harmonyName);
+      dep.loc = req.loc;
+      return dep;
+    }
+    if (req.harmonyExportImportedSpecifier) {
+      if (!this.state.imports[req.harmonyRequest]) {
+        this.state.imports[req.harmonyRequest] = new HardHarmonyImportDependency(req.harmonyRequest);
+      }
+      return new HardHarmonyExportImportedSpecifierDependency(parent, this.state.imports[req.harmonyRequest], req.harmonyId, req
+.harmonyName);
+    }
+    if (req.harmonyCompatibility) {
+      return new HardHarmonyCompatibilityDependency(parent);
+    }
+    var dep = new HardModuleDependency(req.request);
+    dep.loc = req.loc;
+    if (req.optional) {
+      dep.optional = true;
+    }
+    return dep;
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.variables" id="apidoc.element.hard-source-webpack-plugin.deserialize_dependencies.variables">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.deserialize_dependencies.</span>variables
+        <span class="apidocSignatureSpan">(vars, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deserializeVariables(vars, parent) {
+  return vars.map(function(req) {
+    return new DependenciesBlockVariable(req.name, req.expression, deserializeDependencies.call(this, req.dependencies, parent));
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.devtool_options" id="apidoc.module.hard-source-webpack-plugin.devtool_options">module hard-source-webpack-plugin.devtool_options</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.devtool_options.devtool_options" id="apidoc.element.hard-source-webpack-plugin.devtool_options.devtool_options">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>devtool_options
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">devtool_options = function (options) {
+  var devtool = options.devtool;
+  if(devtool &#x26;&#x26; (devtool.indexOf(&#x22;sourcemap&#x22;) &#x3e;= 0 || devtool.indexOf(&#x22;source-map&#x22;) &#x3e;= 0)) {
+    var hidden = devtool.indexOf(&#x22;hidden&#x22;) &#x3e;= 0;
+    var inline = devtool.indexOf(&#x22;inline&#x22;) &#x3e;= 0;
+    var evalWrapped = devtool.indexOf(&#x22;eval&#x22;) &#x3e;= 0;
+    var cheap = devtool.indexOf(&#x22;cheap&#x22;) &#x3e;= 0;
+    var moduleMaps = devtool.indexOf(&#x22;module&#x22;) &#x3e;= 0;
+    var noSources = devtool.indexOf(&#x22;nosources&#x22;) &#x3e;= 0;
+    var legacy = devtool.indexOf(&#x22;@&#x22;) &#x3e;= 0;
+    var modern = devtool.indexOf(&#x22;#&#x22;) &#x3e;= 0;
+    var comment = legacy &#x26;&#x26; modern ? &#x22;\n/*\n//@ sourceMappingURL=[url]\n//# sourceMappingURL=[url]\n*/&#x22; :
+      legacy ? &#x22;\n/*\n//@ sourceMappingURL=[url]\n*/&#x22; :
+      modern ? &#x22;\n//# sourceMappingURL=[url]&#x22; :
+      null;
+    return {
+      filename: inline ? null : options.output.sourceMapFilename,
+      moduleFilenameTemplate: options.output.devtoolModuleFilenameTemplate,
+      fallbackModuleFilenameTemplate: options.output.devtoolFallbackModuleFilenameTemplate,
+      append: hidden ? false : comment,
+      module: moduleMaps ? true : cheap ? false : true,
+      columns: cheap ? false : true,
+      lineToLine: options.output.devtoolLineToLine,
+      noSources: noSources,
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.env_hash" id="apidoc.module.hard-source-webpack-plugin.env_hash">module hard-source-webpack-plugin.env_hash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.env_hash.env_hash" id="apidoc.element.hard-source-webpack-plugin.env_hash.env_hash">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>env_hash
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">env_hash = function (options) {
+  options = options || {};
+  var root = options.root || process.cwd();
+  var files = options.files || [&#x27;package.json&#x27;];
+  var directories = options.directories || [&#x27;node_modules&#x27;];
+
+  return Promise.all([
+    hashFiles(root, files),
+    Promise.all(directories.map(function(dir) {
+      return readdir(path.join(root, dir))
+      .then(function(items) {
+        return Promise.all(items.map(function(item) {
+          return stat(path.join(root, dir, item))
+          .then(function(stat) {
+            if (stat.isDirectory()) {
+              return hashFiles(path.join(root, dir, item), files);
+            }
+            if (stat.isFile()) {
+              return hashFile(path.join(root, dir, item))
+              .then(function(hash) {return hash ? [hash] : hash;});
+            }
+          })
+          .catch(function() {console.error(arguments)});
+        }))
+        .then(function(hashes) {return hashes.filter(Boolean);});
+      })
+      .catch(function() {})
+      .then(flatten);
+    }))
+    .then(flatten),
+  ])
+  .then(flatten)
+  .then(function(items) {
+    items.forEach(function(item) {
+      item[0] = path.relative(root, item[0]);
+    });
+    // console.log(items);
+    items.sort(function(a, b) {
+      if (a[0] &#x3c; b[0]) {
+        return -1;
+      }
+      else if (a[0] &#x3e; b[0]) {
+        return 1;
+      }
+      return 0;
+    });
+    return hashObject(items);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module" id="apidoc.module.hard-source-webpack-plugin.hard_context_module">module hard-source-webpack-plugin.hard_context_module</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.hard_context_module" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.hard_context_module">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardContextModule(cacheItem) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new ContextModule(cacheItem.source, cacheItem.identifier, cacheItem.context),
+      HardContextModule.prototype
+    )
+  );
+  this.cacheItem = cacheItem;
+  this.context = cacheItem.context;
+  this.recursive = cacheItem.recursive;
+  this.regExp = cacheItem.regExp ? new RegExp(cacheItem.regExp) : cacheItem.regExp;
+  this.addon = cacheItem.addon;
+  this.async = cacheItem.async;
+  this.cacheable = true;
+  this.contextDependencies = [cacheItem.context];
+  this.built = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.needRebuild" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.needRebuild">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.</span>needRebuild
+        <span class="apidocSignatureSpan">(cacheItem, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">needRebuild = function (cacheItem, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s) {
+  var needMd5Rebuild = !(fileMd5s &#x26;&#x26; cachedMd5s);
+  if (!needMd5Rebuild) {
+    needMd5Rebuild = cachedMd5s[cacheItem.context] !== fileMd5s[cacheItem.context] || !cachedMd5s[cacheItem.context];
+  }
+  var ts = contextTimestamps[cacheItem.context];
+  if(!ts) ts = Infinity;
+  if (needMd5Rebuild &#x26;&#x26; fileMd5s &#x26;&#x26; cachedMd5s) {
+    cacheItem.invalid = true;
+  }
+  return cacheItem.invalid || ts &#x3e;= cacheItem.builtTime &#x26;&#x26; needMd5Rebuild || needMd5Rebuild &#x26;&#x26; fileMd5s &#x26;&#x26; cachedMd5s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  cacheItem.assets = (cacheItem.assets || [])
+  .reduce(function(carry, key) {
+    carry[key] = assetCache[requestHash(key)];
+    return carry;
+  }, {});
+}
+
+if (!HardModule.<span class="apidocCodeKeywordSpan">needRebuild</span>(
+  cacheItem,
+  cacheItem.fileDependencies,
+  cacheItem.contextDependencies,
+  fileTimestamps,
+  contextTimestamps,
+  fileMd5s,
+  cachedMd5s
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module.prototype" id="apidoc.module.hard-source-webpack-plugin.hard_context_module.prototype">module hard-source-webpack-plugin.hard_context_module.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.build" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.build">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>build
+        <span class="apidocSignatureSpan">(options, compilation, resolver, fs, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function (options, compilation, resolver, fs, callback) {
+  this.builtTime = this.cacheItem.builtTime;
+  var cacheItem = this.cacheItem;
+  var state = {state: {imports: {}}};
+  this.dependencies = deserializeDependencies.dependencies.call(state, cacheItem.dependencies, this);
+  this.variables = deserializeDependencies.variables.call(state, cacheItem.variables, this);
+  deserializeDependencies.blocks.call(state, cacheItem.blocks, this);
+  // this.warnings = cacheItem.warnings.map(deserializeError(ModuleWarning, state), this);
+  // this.errors = cacheItem.errors.map(deserializeError(ModuleError, state), this);
+
+  this._renderedSource = new HardSource(cacheItem);
+
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      cacheItem.assets = (cacheItem.assets || [])
+      .reduce(function(carry, key) {
+        carry[key] = assetCache[requestHash(key)];
+        return carry;
+      }, {});
+    }
+    var module = memoryCache[memCacheId] = new HardModule(cacheItem);
+    module.<span class="apidocCodeKeywordSpan">build</span>(null, null, null, null, function() {});
+    return module;
+  }
+}
+else if (
+  cacheItem &#x26;&#x26;
+  !cacheItem.fileDependencies &#x26;&#x26;
+  !HardContextModule.needRebuild(cacheItem, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.isHard" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.isHard">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>isHard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHard = function () {return true;}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}, false);
+
+// Bust webpack&#x27;s NormalModule unsafeCache. Best case this is done before
+// the compilation really gets started. In the worse case it gets here and
+// we have to tell it to build again.
+needAdditionalPass = compilation.modules.reduce(function(carry, module) {
+  if (
+    module.isHard &#x26;&#x26; module.<span class="apidocCodeKeywordSpan">isHard</span>() &#x26;&#x26;
+    HardModule.needRebuild(module.cacheItem, module.fileDependencies, module.contextDependencies, fileTimestamps, contextTimestamps
+, fileMd5s, cachedMd5s)
+  ) {
+    module.reasons.forEach(function(reason) {
+      if (reason.dependency.__NormalModuleFactoryCache) {
+        reason.dependency.__NormalModuleFactoryCache = null;
+      }
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.needRebuild" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.needRebuild">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>needRebuild
+        <span class="apidocSignatureSpan">(fileTimestamps, contextTimestamps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">needRebuild = function (fileTimestamps, contextTimestamps) {
+  return this.cacheItem.invalid || HardContextModule.needRebuild(this.cacheItem, fileTimestamps, contextTimestamps);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  cacheItem.assets = (cacheItem.assets || [])
+  .reduce(function(carry, key) {
+    carry[key] = assetCache[requestHash(key)];
+    return carry;
+  }, {});
+}
+
+if (!HardModule.<span class="apidocCodeKeywordSpan">needRebuild</span>(
+  cacheItem,
+  cacheItem.fileDependencies,
+  cacheItem.contextDependencies,
+  fileTimestamps,
+  contextTimestamps,
+  fileMd5s,
+  cachedMd5s
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.readableIdentifier" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.readableIdentifier">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>readableIdentifier
+        <span class="apidocSignatureSpan">(requestShortener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readableIdentifier = function (requestShortener) {
+  var identifier = &#x22;&#x22;;
+  identifier += requestShortener.shorten(this.context) + &#x22; &#x22;;
+  if(this.async)
+    identifier += &#x22;async &#x22;;
+  if(!this.recursive)
+    identifier += &#x22;nonrecursive &#x22;;
+  if(this.addon)
+    identifier += requestShortener.shorten(this.addon);
+  if(this.regExp)
+    identifier += prettyRegExp(this.regExp + &#x22;&#x22;);
+  return identifier.replace(/ $/, &#x22;&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.source" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.source">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>source
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function () {
+  return this._renderedSource;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  (module instanceof NormalModule) &#x26;&#x26;
+  (
+    existingCacheItem &#x26;&#x26;
+    module.buildTimestamp &#x3e; existingCacheItem.buildTimestamp ||
+    !existingCacheItem
+  )
+) {
+  var source = module.<span class="apidocCodeKeywordSpan">source</span>(
+    compilation.dependencyTemplates,
+    compilation.moduleTemplate.outputOptions,
+    compilation.moduleTemplate.requestShortener
+  );
+  var assets = Object.keys(module.assets || {}).map(function(key) {
+    return {
+      key: requestHash(key),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.updateHash" id="apidoc.element.hard-source-webpack-plugin.hard_context_module.prototype.updateHash">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module.prototype.</span>updateHash
+        <span class="apidocSignatureSpan">(hash)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateHash = function (hash) {
+  hash.update(this.cacheItem.hashContent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      variables: serializeVariables(block.variables, parent),
+      blocks: serializeBlocks(block.blocks, parent),
+    };
+  });
+}
+function serializeHashContent(module) {
+  var content = [];
+  module.<span class="apidocCodeKeywordSpan">updateHash</span>({
+    update: function(str) {
+      content.push(str);
+    },
+  });
+  return content.join(&#x27;&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module_factory" id="apidoc.module.hard-source-webpack-plugin.hard_context_module_factory">module hard-source-webpack-plugin.hard_context_module_factory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module_factory.hard_context_module_factory" id="apidoc.element.hard-source-webpack-plugin.hard_context_module_factory.hard_context_module_factory">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_context_module_factory
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardContextModuleFactory(options) {
+  this.compilation = options.compilation;
+  this.factory = options.factory;
+  this.resolveCache = options.resolveCache;
+  this.moduleCache = options.moduleCache;
+  this.fileTimestamps = options.fileTimestamps;
+  this.fileMd5s = options.fileMd5s;
+  this.cachedMd5s = options.cachedMd5s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_context_module_factory.prototype" id="apidoc.module.hard-source-webpack-plugin.hard_context_module_factory.prototype">module hard-source-webpack-plugin.hard_context_module_factory.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_context_module_factory.prototype.create" id="apidoc.element.hard-source-webpack-plugin.hard_context_module_factory.prototype.create">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_context_module_factory.prototype.</span>create
+        <span class="apidocSignatureSpan">(context, dependency, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (context, dependency, callback) {
+  var compilation = this.compilation;
+  var factory = this.factory;
+  var resolveCache = this.resolveCache;
+  var moduleCache = this.moduleCache;
+  var fileTimestamps = this.fileTimestamps;
+  var contextTimestamps = this.fileTimestamps;
+  var fileMd5s = this.fileMd5s;
+  var cachedMd5s = this.cachedMd5s;
+
+  // Webpack 2 Factory API
+  var data;
+  if (!callback) {
+    data = context;
+    callback = dependency;
+    dependency = context.dependencies[0];
+    context = context.context;
+  }
+
+  var resolveIdentifier = JSON.stringify({
+    context: context,
+    request: dependency.request,
+    recursive: dependency.recursive,
+    regExp: dependency.regExp ? dependency.regExp.source : null,
+    async: dependency.async,
+  });
+  if (resolveCache[resolveIdentifier]) {
+    var cacheItem = moduleCache[resolveCache[resolveIdentifier].identifier];
+    if (cacheItem) {
+      if (!HardContextModule.needRebuild(
+        cacheItem,
+        fileTimestamps,
+        contextTimestamps,
+        fileMd5s,
+        cachedMd5s
+      )) {
+        return callback(null, new HardContextModule(cacheItem));
+      }
+    }
+  }
+
+  var next = function(fn) {
+    if (data) {
+      factory.create(data, fn);
+    }
+    else {
+      factory.create(context, dependency, fn);
+    }
+  };
+
+  next(function(error, module) {
+    if (error) {
+      return callback(error);
+    }
+    // IgnorePlugin and other plugins can call this callback without an error or
+    // module.
+    if (!module) {
+      return callback();
+    }
+
+    var identifierPrefix = cachePrefix(compilation);
+    if (identifierPrefix === null) {
+      return callback(error, module);
+    }
+    var identifier = identifierPrefix + module.identifier();
+    resolveCache[resolveIdentifier] = {
+      identifier: identifier,
+      resource: module.context,
+    };
+
+    module.needRebuild = function(fileTimestamps, contextTimestamps) {
+      return HardContextModule.needRebuild({context: this.context, builtTime: this.builtTime}, fileTimestamps, contextTimestamps
+, fileMd5s, cachedMd5s);
+    };
+
+    callback(error, module);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var dependencyIdentifier = cacheDependency._inContextDependencyIdentifier;
+if (!checkedDependencies[dependencyIdentifier]) {
+  var dependency = deserializeDependencies.dependencies.call(state, [cacheDependency], null)[0];
+  var factory = compilation.dependencyFactories.get(dependency.constructor);
+  var p = new Promise(function(resolve, reject) {
+    var callFactory = function(fn) {
+      if (factory.create.length === 2) {
+        factory.<span class="apidocCodeKeywordSpan">create</span>({
+          contextInfo: {
+            issuer: cacheItem.resource.split(&#x27;?&#x27;)[0],
+          },
+          context: cacheItem.context,
+          dependencies: [dependency],
+        }, fn);
+      }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_module" id="apidoc.module.hard-source-webpack-plugin.hard_module">module hard-source-webpack-plugin.hard_module</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.hard_module" id="apidoc.element.hard-source-webpack-plugin.hard_module.hard_module">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_module
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardModule(cacheItem) {
+  Object.setPrototypeOf(this,
+    Object.setPrototypeOf(
+      new RawModule(cacheItem.source, cacheItem.identifier, cacheItem.userRequest),
+      HardModule.prototype
+    )
+  );
+
+  this.cacheItem = cacheItem;
+
+  this.request = cacheItem.request;
+  this.userRequest = cacheItem.userRequest;
+  this.rawRequest = cacheItem.rawRequest;
+  this.resource = cacheItem.resource;
+  this.context = cacheItem.context;
+  this.loaders = cacheItem.loaders;
+
+  this.strict = cacheItem.strict;
+  this.exportsArgument = cacheItem.exportsArgument;
+  this.meta = cacheItem.meta;
+  this.buildTimestamp = cacheItem.buildTimestamp;
+  this.fileDependencies = cacheItem.fileDependencies;
+  this.contextDependencies = cacheItem.contextDependencies;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.needRebuild" id="apidoc.element.hard-source-webpack-plugin.hard_module.needRebuild">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.</span>needRebuild
+        <span class="apidocSignatureSpan">(cacheItem, fileDependencies, contextDependencies, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function needRebuild(cacheItem, fileDependencies, contextDependencies, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s) {
+  var timestamp = 0;
+  var buildTimestamp = cacheItem.buildTimestamp;
+  var needsMd5Rebuild = !(fileMd5s &#x26;&#x26; cachedMd5s);
+
+  if (fileDependencies) {
+    fileDependencies.forEach(function(file) {
+      if (!needsMd5Rebuild) {
+        needsMd5Rebuild = cachedMd5s[file] !== fileMd5s[file] || !cachedMd5s[file];
+      }
+      var ts = fileTimestamps[file];
+      if(!ts) timestamp = Infinity;
+      if(ts &#x3e; timestamp) timestamp = ts;
+    });
+  }
+  if (contextDependencies) {
+    contextDependencies.forEach(function(context) {
+      if (!needsMd5Rebuild) {
+        needsMd5Rebuild = cachedMd5s[context] !== fileMd5s[context] || !cachedMd5s[context];
+      }
+      var ts = contextTimestamps[context];
+      if(!ts) timestamp = Infinity;
+      if(ts &#x3e; timestamp) timestamp = ts;
+    });
+  }
+  if (needsMd5Rebuild &#x26;&#x26; fileMd5s &#x26;&#x26; cachedMd5s) {
+    cacheItem.invalid = true;
+  }
+  return (
+    cacheItem.invalid ||
+    timestamp &#x3e;= buildTimestamp &#x26;&#x26; needsMd5Rebuild ||
+    needsMd5Rebuild &#x26;&#x26; fileMd5s &#x26;&#x26; cachedMd5s
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  cacheItem.assets = (cacheItem.assets || [])
+  .reduce(function(carry, key) {
+    carry[key] = assetCache[requestHash(key)];
+    return carry;
+  }, {});
+}
+
+if (!HardModule.<span class="apidocCodeKeywordSpan">needRebuild</span>(
+  cacheItem,
+  cacheItem.fileDependencies,
+  cacheItem.contextDependencies,
+  fileTimestamps,
+  contextTimestamps,
+  fileMd5s,
+  cachedMd5s
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_module.prototype" id="apidoc.module.hard-source-webpack-plugin.hard_module.prototype">module hard-source-webpack-plugin.hard_module.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.build" id="apidoc.element.hard-source-webpack-plugin.hard_module.prototype.build">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>build
+        <span class="apidocSignatureSpan">(options, compilation, resolver, fs, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function build(options, compilation, resolver, fs, callback) {
+  // Non-rendered source used by Stats.
+  if (this.cacheItem.rawSource) {
+    this._source = new RawSource(this.cacheItem.rawSource);
+  }
+  // Rendered source used in built output.
+  this._renderedSource = new HardSource(this.cacheItem);
+
+  var state = {state: {imports: {}}};
+  this.dependencies = deserializeDependencies.dependencies.call(state, this.cacheItem.dependencies, this);
+  this.variables = deserializeDependencies.variables.call(state, this.cacheItem.variables, this);
+  this.warnings = this.cacheItem.warnings.map(deserializeError(ModuleWarning, state), this);
+  this.errors = this.cacheItem.errors.map(deserializeError(ModuleError, state), this);
+  deserializeDependencies.blocks.call(state, this.cacheItem.blocks, this);
+
+  var cacheItem = this.cacheItem;
+  this.assets = Object.keys(cacheItem.assets).reduce(function(carry, key) {
+    var source = cacheItem.assets[key];
+    if (source.type === &#x27;Buffer&#x27;) {
+      source = new Buffer(source);
+    }
+    carry[key] = new RawSource(source);
+    return carry;
+  }, {});
+
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      cacheItem.assets = (cacheItem.assets || [])
+      .reduce(function(carry, key) {
+        carry[key] = assetCache[requestHash(key)];
+        return carry;
+      }, {});
+    }
+    var module = memoryCache[memCacheId] = new HardModule(cacheItem);
+    module.<span class="apidocCodeKeywordSpan">build</span>(null, null, null, null, function() {});
+    return module;
+  }
+}
+else if (
+  cacheItem &#x26;&#x26;
+  !cacheItem.fileDependencies &#x26;&#x26;
+  !HardContextModule.needRebuild(cacheItem, fileTimestamps, contextTimestamps, fileMd5s, cachedMd5s)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.isHard" id="apidoc.element.hard-source-webpack-plugin.hard_module.prototype.isHard">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>isHard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHard = function () {return true;}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}, false);
+
+// Bust webpack&#x27;s NormalModule unsafeCache. Best case this is done before
+// the compilation really gets started. In the worse case it gets here and
+// we have to tell it to build again.
+needAdditionalPass = compilation.modules.reduce(function(carry, module) {
+  if (
+    module.isHard &#x26;&#x26; module.<span class="apidocCodeKeywordSpan">isHard</span>() &#x26;&#x26;
+    HardModule.needRebuild(module.cacheItem, module.fileDependencies, module.contextDependencies, fileTimestamps, contextTimestamps
+, fileMd5s, cachedMd5s)
+  ) {
+    module.reasons.forEach(function(reason) {
+      if (reason.dependency.__NormalModuleFactoryCache) {
+        reason.dependency.__NormalModuleFactoryCache = null;
+      }
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.libIdent" id="apidoc.element.hard-source-webpack-plugin.hard_module.prototype.libIdent">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>libIdent
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">libIdent = function (options) {
+  return contextify(options, this.userRequest);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+request: module.request,
+userRequest: module.userRequest,
+rawRequest: module.rawRequest,
+resource: module.resource,
+loaders: module.loaders,
+identifier: module.identifier(),
+// libIdent: module.libIdent &#x26;&#x26;
+// module.<span class="apidocCodeKeywordSpan">libIdent</span>({context: compiler.options.context}),
+assets: Object.keys(module.assets || {}),
+buildTimestamp: module.buildTimestamp,
+strict: module.strict,
+meta: module.meta,
+used: module.used,
+usedExports: module.usedExports,
+// HarmonyDetectionParserPlugin
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.needRebuild" id="apidoc.element.hard-source-webpack-plugin.hard_module.prototype.needRebuild">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>needRebuild
+        <span class="apidocSignatureSpan">(fileTimestamps, contextTimestamps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">needRebuild = function (fileTimestamps, contextTimestamps) {
+  return this.cacheItem.invalid || needRebuild(this.cacheItem, this.fileDependencies, this.contextDependencies, fileTimestamps,
+contextTimestamps);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  cacheItem.assets = (cacheItem.assets || [])
+  .reduce(function(carry, key) {
+    carry[key] = assetCache[requestHash(key)];
+    return carry;
+  }, {});
+}
+
+if (!HardModule.<span class="apidocCodeKeywordSpan">needRebuild</span>(
+  cacheItem,
+  cacheItem.fileDependencies,
+  cacheItem.contextDependencies,
+  fileTimestamps,
+  contextTimestamps,
+  fileMd5s,
+  cachedMd5s
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.source" id="apidoc.element.hard-source-webpack-plugin.hard_module.prototype.source">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>source
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function () {
+  return this._renderedSource;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  (module instanceof NormalModule) &#x26;&#x26;
+  (
+    existingCacheItem &#x26;&#x26;
+    module.buildTimestamp &#x3e; existingCacheItem.buildTimestamp ||
+    !existingCacheItem
+  )
+) {
+  var source = module.<span class="apidocCodeKeywordSpan">source</span>(
+    compilation.dependencyTemplates,
+    compilation.moduleTemplate.outputOptions,
+    compilation.moduleTemplate.requestShortener
+  );
+  var assets = Object.keys(module.assets || {}).map(function(key) {
+    return {
+      key: requestHash(key),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_module.prototype.updateHash" id="apidoc.element.hard-source-webpack-plugin.hard_module.prototype.updateHash">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_module.prototype.</span>updateHash
+        <span class="apidocSignatureSpan">(hash)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateHash = function (hash) {
+  hash.update(this.cacheItem.hashContent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      variables: serializeVariables(block.variables, parent),
+      blocks: serializeBlocks(block.blocks, parent),
+    };
+  });
+}
+function serializeHashContent(module) {
+  var content = [];
+  module.<span class="apidocCodeKeywordSpan">updateHash</span>({
+    update: function(str) {
+      content.push(str);
+    },
+  });
+  return content.join(&#x27;&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_source" id="apidoc.module.hard-source-webpack-plugin.hard_source">module hard-source-webpack-plugin.hard_source</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_source.hard_source" id="apidoc.element.hard-source-webpack-plugin.hard_source.hard_source">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>hard_source
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardSource(cacheItem) {
+  RawSource.call(this, cacheItem.source);
+  this.cacheItem = cacheItem;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.hard_source.prototype" id="apidoc.module.hard-source-webpack-plugin.hard_source.prototype">module hard-source-webpack-plugin.hard_source.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.constructor" id="apidoc.element.hard-source-webpack-plugin.hard_source.prototype.constructor">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(cacheItem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HardSource(cacheItem) {
+  RawSource.call(this, cacheItem.source);
+  this.cacheItem = cacheItem;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.listMap" id="apidoc.element.hard-source-webpack-plugin.hard_source.prototype.listMap">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>listMap
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listMap = function (options) {
+  return fromStringWithSourceMap(
+    this.cacheItem.source,
+    chooseMap(options, this.cacheItem)
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.map" id="apidoc.element.hard-source-webpack-plugin.hard_source.prototype.map">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>map
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (options) {
+  return chooseMap(options, this.cacheItem);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  copy[key] = obj[key];
+}
+return copy;
+}
+
+function serializeDependencies(deps, parent) {
+return deps
+.<span class="apidocCodeKeywordSpan">map</span>(function(dep) {
+  var cacheDep;
+  if (typeof HarmonyImportDependency !== &#x27;undefined&#x27;) {
+    if (dep instanceof HarmonyImportDependency) {
+      cacheDep = {
+        harmonyImport: true,
+        request: dep.request,
+      };
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.hard_source.prototype.node" id="apidoc.element.hard-source-webpack-plugin.hard_source.prototype.node">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.hard_source.prototype.</span>node
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function (options) {
+  var node = SourceNode.fromStringWithSourceMap(
+    this.cacheItem.source,
+    new SourceMapConsumer(chooseMap(options, this.cacheItem))
+  );
+  var sources = Object.keys(node.sourceContents);
+  for (var i = 0; i &#x3c; sources.length; i++) {
+    var key = sources[i];
+    var content = node.sourceContents[key];
+    delete node.sourceContents[key];
+    SourceNode_setSourceContent.call(node, key, content);
+  }
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// We need a function to help rehydrate source keys, webpack 1 uses source-map
+// 0.4 which needs an appended $. webpack 2 uses source-map 0.5 which may append
+// $. Either way setSourceContent will provide the needed behaviour. This is
+// pretty round about and ugly but this is less prone to failure than trying to
+// determine whether we&#x27;re in webpack 1 or 2 and if they are using webpack-core
+// or webpack-sources and the version of source-map in that.
+var SourceNode_setSourceContent = new RawModule(&#x27;&#x27;)
+.source().<span class="apidocCodeKeywordSpan">node</span>().setSourceContent;
+
+HardSource.prototype.node = function(options) {
+var node = SourceNode.fromStringWithSourceMap(
+  this.cacheItem.source,
+  new SourceMapConsumer(chooseMap(options, this.cacheItem))
+);
+var sources = Object.keys(node.sourceContents);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.toString" id="apidoc.module.hard-source-webpack-plugin.toString">module hard-source-webpack-plugin.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.toString.toString" id="apidoc.element.hard-source-webpack-plugin.toString.toString">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.hard-source-webpack-plugin.util" id="apidoc.module.hard-source-webpack-plugin.util">module hard-source-webpack-plugin.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hard-source-webpack-plugin.util.cachePrefix" id="apidoc.element.hard-source-webpack-plugin.util.cachePrefix">
+        function <span class="apidocSignatureSpan">hard-source-webpack-plugin.util.</span>cachePrefix
+        <span class="apidocSignatureSpan">(compilation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cachePrefix(compilation) {
+  if (typeof compilation[cachePrefixNS] === &#x27;undefined&#x27;) {
+    var prefix = &#x27;&#x27;;
+    var nextCompilation = compilation;
+
+    while (nextCompilation.compiler.parentCompilation) {
+      var parentCompilation = nextCompilation.compiler.parentCompilation;
+      if (!nextCompilation.cache) {
+        if (cachePrefixErrorOnce) {
+          cachePrefixErrorOnce = false;
+          console.error([
+            &#x27;A child compiler (&#x27; + compilation.compiler.name + &#x27;) does not&#x27;,
+            &#x27;have a memory cache. Enable a memory cache with webpack\&#x27;s&#x27;,
+            &#x27;`cache` configuration option. HardSourceWebpackPlugin will be&#x27;,
+            &#x27;disabled for this child compiler until then.&#x27;,
+          ].join(&#x27;\n&#x27;));
+        }
+        prefix = null;
+        break;
+      }
+
+      var cache = nextCompilation.cache;
+      var parentCache = parentCompilation.cache;
+
+      if (cache === parentCache) {
+        nextCompilation = parentCompilation;
+        continue;
+      }
+
+      var cacheKey;
+      for (var key in parentCache) {
+        if (key &#x26;&#x26; parentCache[key] === cache) {
+          cacheKey = key;
+          break;
+        }
+      }
+
+      if (!cacheKey) {
+        if (cachePrefixErrorOnce) {
+          cachePrefixErrorOnce = false;
+          console.error([
+            &#x27;A child compiler (&#x27; + compilation.compiler.name + &#x27;) has a&#x27;,
+            &#x27;memory cache but its cache name is unknown.&#x27;,
+            &#x27;HardSourceWebpackPlugin will be disabled for this child&#x27;,
+            &#x27;compiler.&#x27;,
+          ].join(&#x27;\n&#x27;));
+        }
+        prefix = null;
+        break;
+      }
+      else {
+        prefix = cacheKey + prefix;
+      }
+
+      nextCompilation = parentCompilation;
+    }
+
+    compilation[cachePrefixNS] = prefix;
+  }
+
+  return compilation[cachePrefixNS];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
