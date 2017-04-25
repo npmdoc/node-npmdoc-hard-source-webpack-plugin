@@ -1,4 +1,7 @@
-# api documentation for  [hard-source-webpack-plugin (v0.3.11)](https://github.com/mzgoddard/hard-source-webpack-plugin#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-hard-source-webpack-plugin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hard-source-webpack-plugin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hard-source-webpack-plugin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hard-source-webpack-plugin)
+# npmdoc-hard-source-webpack-plugin
+
+#### basic api documentation for  [hard-source-webpack-plugin (v0.3.12)](https://github.com/mzgoddard/hard-source-webpack-plugin#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-hard-source-webpack-plugin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hard-source-webpack-plugin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hard-source-webpack-plugin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hard-source-webpack-plugin)
+
 #### Hard cache the source of modules in webpack.
 
 [![NPM](https://nodei.co/npm/hard-source-webpack-plugin.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/hard-source-webpack-plugin)
@@ -38,22 +41,22 @@
     "devDependencies": {
         "chai": "^3.5.0",
         "css-loader": "^0.26.1",
-        "extract-text-webpack-plugin": "^1.0.1 || ^2.0.0-beta",
-        "file-loader": "^0.9.0",
+        "extract-text-webpack-plugin": "^1.0.1",
+        "file-loader": "^0.10.1",
         "html-webpack-plugin": "^2.22.0",
         "memory-fs": "^0.4.1",
         "mocha": "^3.0.2",
         "rimraf": "^2.5.4",
         "style-loader": "^0.13.1",
         "webpack": "^1.13.1",
-        "webpack-isomorphic-tools": "^2.5.7"
+        "webpack-isomorphic-tools": "^3.0.0"
     },
     "directories": {},
     "dist": {
-        "shasum": "f647b003cac10cd56e10e527a40f5e3254f5805b",
-        "tarball": "https://registry.npmjs.org/hard-source-webpack-plugin/-/hard-source-webpack-plugin-0.3.11.tgz"
+        "shasum": "ba9bf1ce645e83146b4324c068909275997223b5",
+        "tarball": "https://registry.npmjs.org/hard-source-webpack-plugin/-/hard-source-webpack-plugin-0.3.12.tgz"
     },
-    "gitHead": "3405ddfaead21e28d445fb17d2afde244b65e252",
+    "gitHead": "91d610fd502db07e03646f5703775a15e673da84",
     "homepage": "https://github.com/mzgoddard/hard-source-webpack-plugin#readme",
     "keywords": [
         "webpack",
@@ -82,7 +85,8 @@
     "scripts": {
         "test": "mocha tests/*.js"
     },
-    "version": "0.3.11"
+    "version": "0.3.12",
+    "bin": {}
 }
 ```
 
